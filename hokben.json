@@ -1,0 +1,547 @@
+[
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/cc8c22888510f1205b3feebaab2b4618-1703643829982",
+    "title": "WAFU SHOYU RAMEN",
+    "price": 45000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/520080ae9f08820e9a8074ca7fb0f4ee-1703643985233",
+    "title": "WAFU CURRY BEEF RAMEN",
+    "price": 61000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/827ac7152a128e9f36ac8b5741ca10dc-1675167506284",
+    "title": "SPICY RAMEN REGULER",
+    "price": 38000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/9b3b1cca9b0cc36f18d07e49343b9ae2-1675167567939",
+    "title": "SPICY RAMEN LARGE",
+    "price": 48000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/a6f407e5e2a291f7d7ece41eadb53758-1670863217303",
+    "title": "HOKKAIDO MISO RAMEN REGULER",
+    "price": 35000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/b1d1fc79626e64fd2e4a75f00fdcb362-1670863265645",
+    "title": "HOKKAIDO MISO RAMEN LARGE",
+    "price": 45000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/d1220d8c40bc1ae44727c90ee498823d-1670863321679",
+    "title": "TORI PAITAN RAMEN REGULER",
+    "price": 35000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/2afd00d67c462619d4f9e2d47fe6433e-1670863362996",
+    "title": "TORI PAITAN RAMEN LARGE",
+    "price": 45000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/ea971ddd962145cf267af681b8b8645f-1660147931030",
+    "title": "Super Bowl Beef Teriyaki + Egg Chicken Roll",
+    "price": 38000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/b312df982c43012ab9e637599262aef5-1660148158689",
+    "title": "Super Bowl Beef Teriyaki + Tori Ball",
+    "price": 38000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/3d9497de554be0c6d55e252230fc19ea-1660148077375",
+    "title": "Super Bowl Beef Teriyaki + Shrimp Roll",
+    "price": 38000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/27ea4abeb447bc10f9d6ad6abba8dbe3-1685669209098",
+    "title": "TEMPURA DON",
+    "price": 47000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/ecfe74bd52a3d92781dc8f3aeb067b2f-1660011201039",
+    "title": "Paket Blackpepper Miso Chicken",
+    "price": 38000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/a1b51c7a2dbd0c47279f3228ddaa215e-1660018909657",
+    "title": "Premium Set Seafood Beef Teriyaki",
+    "price": 64000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/c00cc4e83d740ee2dc54617e5aae8ea0-1706256224477",
+    "title": "Premium Set Seafood Beef Yakiniku",
+    "price": 64000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/f0b9d580d9386a60506086a819fd1de4-1660019294911",
+    "title": "HOKA HEMAT 1",
+    "price": 27500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/e63825cb9d999e96593b306c0533c663-1660019336852",
+    "title": "HOKA HEMAT 2",
+    "price": 27500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/db0a4a72f3cb8702f80bddd07230e937-1660019366755",
+    "title": "HOKA HEMAT 3",
+    "price": 27500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/cd6a228dc467a949c81aa9ac7f7bdedb-1660019501018",
+    "title": "HOKA HEMAT 4",
+    "price": 27500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/e67b22036abce714d34627611d8bf6bc-1660019556051",
+    "title": "Premium Set Beef Teriyaki",
+    "price": 64000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/9757851e08588ca6bc4ac0883fad3c2f-1706258471153",
+    "title": "Premium Set Beef Yakiniku",
+    "price": 64000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/3eb7681aeb2ceefe459f045eccd8586c-1660011234832",
+    "title": "Favorite Set Chicken Teriyaki",
+    "price": 53000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/faa7f3adf5ae90cd5a7df17b89c2eafb-1706257081142",
+    "title": "Favorite Set Chicken Yakiniku",
+    "price": 53000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/f08d45e991191654da03b53c4d81ffbc-1667270496086",
+    "title": "VALUE SET 1",
+    "price": 34000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/a0079d359aadc0bc23279829145566ff-1667270775756",
+    "title": "VALUE SET 2",
+    "price": 34000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/0f1c6488b7bdd76689ba4b2c6790602e-1667271843919",
+    "title": "VALUE SET 3",
+    "price": 34000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/05f4987d6da89c99292dfea40695f52f-1667271099557",
+    "title": "VALUE SET 4",
+    "price": 34000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/f85ddcbcbd98bb38cd619ca81601e35f-1660011154575",
+    "title": "PAKET A",
+    "price": 55000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/2a516633a25106ce96fda405c486cf53-1660011136836",
+    "title": "PAKET B",
+    "price": 49000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/0c633ccd48c9b5aa842b8948f589e4a7-1660011117755",
+    "title": "PAKET C",
+    "price": 55000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/a8bd001fc3f4157cc7f8f53e568ff2e9-1660011094657",
+    "title": "PAKET D",
+    "price": 49000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/da9f9e1bd395d2ea74de346f34d82394-1660019653184",
+    "title": "SIMPLE SET CHICKEN YAKINIKU 1",
+    "price": 41000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/85b23c671343102e25a090b5c9bdcff8-1660019707551",
+    "title": "SIMPLE SET CHICKEN YAKINIKU 2",
+    "price": 41000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/5a9929ddeb4f83c610389c6643c276c3-1660033285821",
+    "title": "SIMPLE SET CHICKEN TERIYAKI 1",
+    "price": 41000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/6b1e64033ed3710317e1374db76b8de9-1660033314771",
+    "title": "SIMPLE SET CHICKEN TERIYAKI 2",
+    "price": 41000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/320fb59b18e2ccf581b65c19f5da6246-1660019766088",
+    "title": "BENTO SPECIAL 1",
+    "price": 58000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/cc4cb8379c9abfa8ec426684a156d136-1660019790958",
+    "title": "BENTO SPECIAL 2",
+    "price": 63000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/16ebaa4422513d42745a78879b868128-1660019810670",
+    "title": "BENTO SPECIAL 3",
+    "price": 63000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/80d31dbc49226ec90929f330ef995469-1660019833554",
+    "title": "BENTO SPECIAL 4",
+    "price": 63000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/dcde82d813edbb9c8ff2ca4e733e7a6e-1705915193080",
+    "title": "KIDZU BENTO 1",
+    "price": 41000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/7281c16d2aa8779e769e30f2e7fe106c-1705915170624",
+    "title": "KIDZU BENTO 2",
+    "price": 41000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/013141e3482245920f67057af4bf465c-1705915181170",
+    "title": "KIDZU BENTO 3",
+    "price": 41000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/98f6964d233ea1d17fffdb74d5b326ce-1705915186210",
+    "title": "KIDZU BENTO 4",
+    "price": 41000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/7c8ec314a07e1ee01bb02c0ad0dc7ea7-1680335821654",
+    "title": "CHICKEN CURRY YAKI",
+    "price": 30000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/0f1f31f982dd01ebaa05ea6adbd645c7-1660011179927",
+    "title": "Blackpepper Miso Chicken",
+    "price": 35000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/11e69861fb6df614e49084de791f98d9-1660020910152",
+    "title": "TAKOYAKI MENTAI",
+    "price": 40000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/729e6ff73170f97262f74122c5f86693-1660020938918",
+    "title": "TAKOYAKI ORIGINAL",
+    "price": 38000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/25af18d605682a9ee5964cbf8ffb6fd2-1660021204262",
+    "title": "HOT SPICY CHICKEN TERIYAKI",
+    "price": 38000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/47cd75c78f10532d126d89a6571f73db-1660021258558",
+    "title": "HOT SPICY BEEF TERIYAKI",
+    "price": 48000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/de7bcaab4fcc8728656353b8b8c50830-1660021526361",
+    "title": "CHICKEN TERIYAKI",
+    "price": 33000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/51f6922339800d6e46b57f24c626f3ac-1660021687342",
+    "title": "BEEF TERIYAKI",
+    "price": 43000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/8d112e20d809be482ef4e02d946537a9-1660021821926",
+    "title": "CHICKEN YAKINIKU",
+    "price": 33000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/34f61fd789c80b8cf815e8eac4a6ee8e-1660021724105",
+    "title": "BEEF YAKINIKU",
+    "price": 43000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/fdeb0c94d54a47329349bb1a60f046e6-1660011292345",
+    "title": "HOKBEN FRIED CHICKEN 1 PC",
+    "price": 24000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/2942b036c5110eca5198ea2c3d38711d-1663844793658",
+    "title": "HOKBEN FRIED CHICKEN 2 PCS",
+    "price": 42000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/4a275963ddde063d0b03a6163b55e235-1660011324573",
+    "title": "HOKBEN FRIED CHICKEN 9 PCS",
+    "price": 165000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/1dee18e12f9178486d1c6f6e03acdce1-1660011255817",
+    "title": "PAKET FRIED CHICKEN 1 PC",
+    "price": 42000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/1bff6ea063fad60defdb15810805d485-1660011273334",
+    "title": "PAKET FRIED CHICKEN 2 PCS",
+    "price": 56000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/9033cd5ca7d8a76f733d7a8427e6a687-1685668936098",
+    "title": "TEMPURA MORIAWASE",
+    "price": 42000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/4ece8c4a1fe8fee08e356706281f1d46-1660023045332",
+    "title": "CRISPY KARAAGE 4 PCS",
+    "price": 29500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/55e2725f61e7a8f3e69f7e05f0e4d3f6-1660023177661",
+    "title": "CHICKEN KATSU",
+    "price": 33000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/d988b91a6a761605729cb24c038c9611-1660023213128",
+    "title": "TORI NO TEBA",
+    "price": 30500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/3e6acd59a2119c6faeaf98b8c2b8f857-1660023315154",
+    "title": "KANI ROLL",
+    "price": 33000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/d14f6f61da56d4ecbcde65da367c0eb6-1660023446300",
+    "title": "EKKADO",
+    "price": 40000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/5925f46145f22f8795e92f9dc3fcf868-1660023667383",
+    "title": "EBI FURAI",
+    "price": 40000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/5d3d928d422a2938d0ff8b130552fb82-1660023814703",
+    "title": "EGG CHICKEN ROLL",
+    "price": 34000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/ddcb1c15997c0801931abfef1482d4ed-1660023716093",
+    "title": "TORI BALL",
+    "price": 34000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/2c8d81234840e5da404cea4c680c1296-1660023850589",
+    "title": "SHRIMP ROLL",
+    "price": 33000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/5cc46e1f0640efc3e589b947d4a25373-1660023907539",
+    "title": "SHIRATAKI SOUP",
+    "price": 17000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/6e41887e73d141e3220c64dac0988a6d-1660024020893",
+    "title": "CLEAR SOUP",
+    "price": 10000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/b3f0fdbfc11e38ed170030cc201f26be-1660024210218",
+    "title": "CHICKEN TOFU (2pcs)",
+    "price": 21000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/f31f6b83d164f6ef71ec7c404f79b030-1660024232829",
+    "title": "SHRIMP BALL",
+    "price": 24500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/4f6ea9ee17f7292abf49ee3938f06dec-1660024262853",
+    "title": "SUKIYAKI",
+    "price": 60000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/ba1d0cdcbc47faae2f1cb95fc1e3b1c5-1660024299224",
+    "title": "SHRIMP DUMPLING",
+    "price": 21000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/e1c486925a86b5c56b1d76d7ea940236-1660030415118",
+    "title": "SOFT PUDDING RED VELVET",
+    "price": 19000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/b6cad3e9e7e0a7f25d055e47c7220a8d-1660030453581",
+    "title": "SOFT PUDDING BUBBLE GUM",
+    "price": 19000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/cf601c4c5a854a2e91f97dd9abb41fba-1660030493970",
+    "title": "SOFT PUDDING GREEN TEA",
+    "price": 19000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/85d3982312f46a43b9216119c0b76a80-1660030535279",
+    "title": "PUDDING COKLAT",
+    "price": 21000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/91020f62ca38db0a7e24a24d81f0a6b8-1660030578510",
+    "title": "SOFT CARAMEL PUDDING",
+    "price": 19000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/4a5646931f8a95eb1dc57aac76e460c2-1660030617971",
+    "title": "SOFT TARO PUDDING",
+    "price": 19000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/54da3d30b1d07a19d3216a631b093033-1660030650083",
+    "title": "SOFT MANGO PUDDING",
+    "price": 19000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/ad89d4f03722bd1adb15e6a6e2d044b5-1660030681385",
+    "title": "OGURA",
+    "price": 14000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/99dd929a53f4b46150f2671cdad3d127-1660030884758",
+    "title": "ES SARANG BURUNG",
+    "price": 21000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/ae5b2742e57bfb0e332dbc25f1e9dc4d-1662429556587",
+    "title": "ES MERAH DELIMA",
+    "price": 20000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/53f7b33c3f12333093f2d17cf0aa9091-1702267560872",
+    "title": "CRISPY AGE WANTANG 5 PCS",
+    "price": 17000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/0337f49cc8d224e08036af29fb1cd5bf-1701399513163",
+    "title": "SAUSAGE ROLL 1 PC",
+    "price": 13000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/934d33e4dad42444f9b08643abc8c371-1690860911685",
+    "title": "CREAMY EBI KOROKKE 3 PCS",
+    "price": 24000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/591a48d64131309fefe45e5cff439251-1690860966940",
+    "title": "CREAMY EBI KOROKKE 5 PCS",
+    "price": 38000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/06bbef8204e625fe42f432dbe37707ae-1660030945827",
+    "title": "SHUMAY STEAM (3pcs)",
+    "price": 16000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/d3dc8ca893a758ac20aea131b261bb04-1660030981854",
+    "title": "SHUMAY FURAI (3pcs)",
+    "price": 16000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/9c8b1a8f2f49bf82f2130a3b75e1413f-1660031066514",
+    "title": "TAKOYAKI 5 PCS",
+    "price": 23500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/4e8b4ec64f9d2073c41705fe2377cd4f-1660031098674",
+    "title": "TAKOYAKI 3 PCS",
+    "price": 17000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/3f7c1cb0bfa90fb211d9b5912dcd032f-1695086709612",
+    "title": "MATCHA MILK BERRY 250 ML",
+    "price": 20000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/d27d46291f033e9366f445c1c2e1cff5-1695086761531",
+    "title": "ICED COFFEE GANBATTE 250 ML",
+    "price": 18000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/af660495cd01320ba848a9c0dd69b6da-1660031504607",
+    "title": "PROMO ICED COFFEE MILK BS 500ml",
+    "price": 35000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/0e56948a6a8d285c78042b97637c5f19-1660031842438",
+    "title": "KOORI KONYAKU STRAWBERRY 500 ML",
+    "price": 28000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/b62ab0044cd8a7fe7ef49df3740ad5c1-1660031812812",
+    "title": "KOORI KONYAKU CHOCOLATE 500 ML",
+    "price": 28000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/de519de6a1ccc02b5af54ad3959e2013-1660032100269",
+    "title": "COLD OCHA",
+    "price": 10000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/40cd4b428adfc7e42cc7ac6daf110429-1660032135653",
+    "title": "LEMON TEA",
+    "price": 12000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/4032295c2c51c6e625a85746b5cb59a9-1660032166557",
+    "title": "MILO",
+    "price": 11500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/cf4eaae061e8720102b76a722cf56ce7-1660032291118",
+    "title": "COCA COLA",
+    "price": 12000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/255f1b952b2c4d5566ade29c3460b3ba-1660032399418",
+    "title": "Aqua",
+    "price": 9000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/489f44c9c3b18f57dac2e6036560f3bd-1660032327909",
+    "title": "Teh Kotak Sosro",
+    "price": 10000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/272ef6613944ee6bb8700c12e2a6a883-1660031249316",
+    "title": "SAUS SAMBAL EXTRA PEDAS",
+    "price": 13000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/d4e54aa120b07a697ad2c2482a098d05-1660031296824",
+    "title": "SALAD PORSIAN NEW",
+    "price": 17000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/menu/ccbaf95d68cb94999f727584415edf1a-1660031329504",
+    "title": "RICE",
+    "price": 9000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/img_assets/menu/TAKE-AWAY-BAG-STANDARD_1594392252812.jpg",
+    "title": "TAKE AWAY BAG STANDARD",
+    "price": 7500
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/img_assets/menu/TAKE-AWAY-PAPER-BAG-ALA-CARTE_1594392156562.jpg",
+    "title": "TAKE AWAY PAPER BAG ALA CARTE",
+    "price": 2000
+  },
+  {
+    "image": "https://hokben-images.s3.ap-southeast-3.amazonaws.com/img_assets/menu/TAKE-AWAY-BAG-REGULER_1594392228642.jpg",
+    "title": "TAKE AWAY BAG REGULER",
+    "price": 3000
+  }
+]

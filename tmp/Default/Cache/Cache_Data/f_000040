@@ -1,0 +1,453 @@
+$(document).ready(function(){
+    //set active selected menu navbar
+    var path = window.location.href;
+    $('ul a').each(function() {
+        if (this.href === path) {
+            $(this).addClass('active');
+        }
+    });
+
+    //initiate cart
+    getFullCart();
+    getFullCartNoLogin();
+
+    //nav tab location option
+    $('#location-option a').on('click', function (location) {
+        location.preventDefault();
+        $(this).tab('show');
+    });
+
+    getPointsAndVouchersNav();
+});
+
+function listCart(objCart){
+    let cartContainer = $('div#show-cart');
+    let cartInfo = $('div#cart-info');
+    cartInfo.html(``);
+    cartContainer.html(``);
+
+    let chekoutButton = $('a#checkout-button');
+    let cart = JSON.parse(objCart);
+    let total_items_qty = 0;
+    let total_items_price = 0;
+
+    if (!$.isEmptyObject(cart)){
+        if((typeof cart.statusCode !== "undefined") && (cart.statusCode === 0)){
+            if((!$.isEmptyObject(cart.response)) && (typeof cart.response !== "undefined")){
+                if(cart.response.items.length === 0){
+                    //if length items = 0
+                    cartContainer.append(`<div class='alert alert-danger' role='alert'>${cart.message}</div>`);
+                    chekoutButton.hide();
+                } else {
+                    $.each(cart.response.items, function (index, menu) {
+                        let menuPrice = parseInt(menu.cart_item_qty) * parseInt(menu.menu_price);
+
+                        total_items_qty += parseInt(menu.cart_item_qty);
+                        total_items_price += menuPrice;
+
+                        cartContainer.append(`
+                                <form id="form-update-menu-${menu.cart_item_id}">
+                                    <div class="card card-rounded mb-3">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6 col-md-2 mb-3 d-flex align-items-center justify-content-center justify-content-md-start"><img class="img-fluid rounded my-auto" src="${menu.menu_picture}" style="max-width: 50px"></div>
+                                                <div class="col-6 col-md-3 mb-3 d-flex align-items-center justify-content-end justify-content-md-start"><p class="small mb-0">${menu.menu_name_idn}</p></div>
+                                                <div class="col-6 col-md-4 mb-3 d-flex align-items-center"><input type="number" id="cart-cart-item-qty-${menu.cart_item_id}" name="cart_item_qty" min="1" max="50" class="form-control" value="${menu.cart_item_qty}"></div>
+                                                <div class="col-6 col-md-3 mb-3 d-flex align-items-center justify-content-end"><p class="small mb-0" id="cart-item-price-${menu.cart_item_id}">Rp. ${menuPrice.toLocaleString("id-ID")}</p></div>
+                                            </div>
+                                            <div id="cart-addon-upgrade-${menu.cart_item_id}"></div>
+                                            <div class="form-group">
+                                                <label for="order-menu-notes-update" class="small">${cart.response.note_title} :</label>
+                                                <textarea class="form-control form-control-sm" id="cart-cart-item-notes-${menu.cart_item_id}" name="cart_item_notes" rows="1">${menu.cart_item_notes}</textarea>
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-center">
+                                                <button class="btn btn-sm btn-outline-hokben mr-3" type="button" onclick="updateMenu(${menu.cart_item_id})">${cart.response.updateBtn}</button>
+                                                <button type="button" class="btn btn-sm btn-primary-hokben" onclick="deleteMenu(${menu.store_id},${menu.cart_item_id})">${cart.response.deleteBtn}</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="store_id" value="${cart.response.store_id}"/>
+                                    <input type='hidden' name='service_id' value="${cart.response.service_id}"/>
+                                    <input type="hidden" name="parent_menu_no_plu" value="${menu.menu_no_plu}"/>
+                                    <input type="hidden" name="parent_category_id" value="${menu.category_id}"/>
+                                    <input type="hidden" name="parent_cart_item_id" value="${menu.cart_item_id}"/>
+                                </form>
+                            `);
+
+                        cartAddonUpgrade(menu.upgrade,menu.cart_item_id);
+                        cartAddonUpgrade(menu.addon,menu.cart_item_id);
+
+                        let spinner = $("input#cart-cart-item-qty-"+menu.cart_item_id);
+                        let notes = $("textarea#cart-cart-item-notes-"+menu.cart_item_id);
+
+                        spinner.inputSpinner();
+                        spinner.attr("min",'1');
+                        spinner.attr("max",cart.response.max_order);
+
+                        var clickTimeout;
+
+                        spinner.on("input change", function (event) {
+                            clearTimeout(clickTimeout);
+                            clickTimeout = setTimeout(function(){
+                                updateMenu(menu.cart_item_id); // replace with your update code
+                            }, 500);
+                        });
+
+                        notes.on("keyup change", function (event) {
+                            clearTimeout(clickTimeout);
+                            clickTimeout = setTimeout(function(){
+                                updateMenu(menu.cart_item_id); // replace with your update code
+                            }, 500);
+                        });
+                    });
+
+                    chekoutButton.show();
+                    cartInfo.append(`
+                                <table class="table table-sm table-borderless w-auto">
+                                    <tr>
+                                        <td class="small">${cart.response.service_title}</td>
+                                        <td class="small">:</td>
+                                        <td class="text-hokben-red small">${cart.response.service_name}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="small">Outlet</td>
+                                        <td class="small">:</td>
+                                        <td class="small text-hokben-red">${cart.response.store_name}</td>
+                                    </tr>
+                                </table>
+                            `);
+                }
+            } else {
+                cartContainer.append(`<div class='alert alert-danger' role='alert'>${cart.message}</div>`);
+                chekoutButton.hide();
+            }
+        } else {
+            cartContainer.append(`<div class='alert alert-danger' role='alert'>${cart.message}</div>`);
+            chekoutButton.hide();
+        }
+    } else {
+        cartContainer.append(`<div class='alert alert-danger' role='alert'>${cart.message}</div>`);
+        chekoutButton.hide();
+    }
+
+    if(total_items_qty >= 100){
+        $('span#cart-counter').html('99+');
+    } else {
+        $('span#cart-counter').html(total_items_qty);
+    }
+
+    $('p#cart-subtotal').text('Rp. ' + total_items_price.toLocaleString("id-ID"));
+}
+
+function getFullCart(){
+    var result = get(baseurl + "cart");
+
+    result.done(function(objCart) {
+        listCart(hexDecode(objCart));
+    });
+}
+
+function cartAddonUpgrade(items,cart_item_id) {
+    let childContainer = $('div#cart-addon-upgrade-'+cart_item_id);
+
+    if(items !== null){
+        $.each(items, function (index,item) {
+            let menuPrice = parseInt(item.cart_item_qty) * parseInt(item.menu_price);
+            childContainer.append(`
+                <div class="row">
+                    <div class="col-2 mb-3 d-flex align-items-center justify-content-start"><img class="img-fluid rounded my-auto" src="${item.menu_picture}" style="max-width: 50px"></div>
+                    <div class="col-2 col-md-3 mb-3 d-flex align-items-center justify-content-start"><p class="small mb-0">${item.menu_name_idn}</p></div>
+                    <div class="col-5 col-md-4 mb-3 d-flex align-items-center"><input type="number" id="cart-cart-item-qty-${item.cart_item_id}" name="cart_item_qty" min="1" max="50" class="form-control form-control-sm" value="${item.cart_item_qty}"></div>
+                    <div class="col-3 mb-3 d-flex align-items-center justify-content-end"><p class="small mb-0">Rp. ${menuPrice.toLocaleString("id-ID")}</p></div>
+                </div>
+            `);
+        });
+    }
+}
+
+function setLocale(locale){
+    let result = post(baseurl + "set-locale", {
+        lang: locale,
+        [csrfName] : csrfHash
+    });
+
+    result.done(function (result) {
+        $ret = JSON.parse(hexDecode(result));
+        csrfHash = $ret.csrfhash;
+        location.reload();
+    });
+}
+
+//for nav
+function getPointsAndVouchersNav() {
+    var result = get(baseurl + 'vouchers/status');
+
+    result.done(function (result) {
+        var obj = JSON.parse(hexDecode(result));
+
+        $('#PointsValue').text(obj.points);
+        $('#VouchersValue').text(obj.vouchers);
+    })
+}
+
+function checkCartSelectedMenu(menuId, recommended = undefined) {
+    var result = get(baseurl + "cart");
+
+    result.done(function (obj) {
+        var cart = JSON.parse(hexDecode(obj));
+        var sameMenuContainer = $('div#show-add-same-menu');
+        sameMenuContainer.html(``);
+        var found = false;
+        var menuFound = {};
+
+        if (!$.isEmptyObject(cart)){
+            if(cart.statusCode === 0){
+                if(!$.isEmptyObject(cart.response)){
+                    if(cart.response.items.length !== 0){
+                        var items = [];
+
+                        $.each(cart.response.items, function (index, item) {
+                            if(item.menu_store_id == menuId){
+                                found = true;
+                                items.push(item);
+                            }
+                        });
+
+                        menuFound = {
+                            store_id : cart.response.store_id,
+                            service_id : cart.response.service_id,
+                            items : items
+                        };
+                    }
+                }
+            }
+        }
+
+        if (found === true){
+            $.each(menuFound.items, function (index, menu) {
+                sameMenuContainer.append(`
+                                <form id="update-selected-menu${menu.cart_item_id}">
+                                    <div class="card card-rounded mb-3">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-4 mb-3 d-flex align-items-center justify-content-start"><img class="img-fluid rounded my-auto" src="${menu.menu_picture}" style="max-width: 50px"></div>
+                                                <div class="col-3 col-md-4 mb-3 d-flex align-items-center justify-content-start"><p class="small mb-0">${menu.menu_name_idn}</p></div>
+                                                <div class="col-5 col-md-4 mb-3 d-flex align-items-center"><input type="number" id="same-cart-item-qty-${menu.cart_item_id}" name="cart_item_qty" min="1" max="50" class="form-control form-control-sm" value="${menu.cart_item_qty}"></div>
+                                            </div>
+                                            <div id="cart-addon-upgrade-${menu.cart_item_id}"></div>
+                                            <div class="form-group">
+                                                <label for="order-menu-notes-update" class="small">${cart.response.note_title} :</label>
+                                                <textarea class="form-control form-control-sm" id="same-cart-item-notes-${menu.cart_item_id}" name="cart_item_notes" rows="1">${menu.cart_item_notes}</textarea>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <button class="btn btn-sm btn-outline-hokben mr-3" type="button" onclick="updateSelectedMenu(${menu.cart_item_id})" data-dismiss="modal">${cart.response.updateBtn}</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="store_id" value="${menuFound.store_id}"/>
+                                    <input type='hidden' name='service_id' value="${menuFound.service_id}"/>
+                                    <input type="hidden" name="parent_menu_no_plu" value="${menu.menu_no_plu}"/>
+                                    <input type="hidden" name="parent_category_id" value="${menu.category_id}"/>
+                                    <input type="hidden" name="parent_cart_item_id" value="${menu.cart_item_id}"/>
+                                </form>
+                            `);
+
+                let spinner = $("input#same-cart-item-qty-"+menu.cart_item_id);
+                let notes = $("textarea#same-cart-item-notes-"+menu.cart_item_id);
+
+                spinner.inputSpinner();
+                spinner.attr("min",'1');
+                spinner.attr("max",cart.response.max_order);
+
+                var clickTimeout;
+
+                spinner.on("input change", function (event) {
+                    clearTimeout(clickTimeout);
+                    clickTimeout = setTimeout(function(){
+                        updateSelectedMenu(menu.cart_item_id); // replace with your update code
+                    }, 500);
+                });
+
+                notes.on("change keyup", function (event) {
+                    clearTimeout(clickTimeout);
+                    clickTimeout = setTimeout(function(){
+                        updateSelectedMenu(menu.cart_item_id); // replace with your update code
+                    }, 500);
+                });
+                
+                $('#confirmMakeAnotherBtn').unbind();
+                $('#confirmMakeAnotherBtn').bind('click', function () {
+                    makeAnother(menuId, recommended);
+                });
+
+                $('#sameMenuModal').modal('show');
+            });
+        } else {
+            $('#menuModal' + menuId + (recommended ? "-r" : "")).modal('show');
+        }
+    });
+}
+
+function checkActiveOrder() {
+    get(baseurl + 'checkorder').done(function (result) {
+        var res = JSON.parse(hexDecode(result));
+        if(res.status === "active"){
+            var alertModal = $('#ActiveOrderModal');
+            alertModal.modal({backdrop: 'static', keyboard: false});
+            alertModal.modal('show');
+        } else if(res.status === "unauthorized"){
+            window.location.href = baseurl+'login';
+        }
+    });
+}
+
+function makeAnother(menuId, recommended = undefined)
+{
+    $('#sameMenuModal').modal('hide');
+    $('#menuModal' + menuId + (recommended ? "-r" : "")).modal('show');
+}
+
+function changeCart(menuId)
+{
+    $('#cartConfirmationModal').modal('hide');
+    selectMenu(menuId,true);
+}
+
+function selectMenu(menuId,force = false,source = null){
+    var changeCartBtn = $('#changeCartBtn');
+    var data = $('#form-menu-'+menuId).serializeArray();
+
+    if(force === true){
+        data.push({name: 'force', value: true});
+    }
+
+    var select = post(baseurl + "cart", objectifyForm(data));
+
+    select.done(function (objCart) {
+        let cart = JSON.parse(hexDecode(objCart));
+
+        if (cart.statusCode === -111){
+            changeCartBtn.unbind(); //clear bind event before
+            $('#cartConfirmationModal').modal('show');
+            changeCartBtn.bind('click',function () {
+                changeCart(menuId);
+            });
+        } else {
+            analytics.logEvent('add_to_cart', { menu_id : menuId });
+
+            $('#form-menu-'+menuId).trigger("reset");
+            $('input#cart-item-qty-'+menuId).val(1);
+            listCart(hexDecode(objCart));
+
+            if((source !== null) && (source === "recc")){
+                location.reload();
+            }
+        }
+    });
+}
+
+function updateSelectedMenu(ParentId) {
+    var data = objectifyForm($('#update-selected-menu'+ParentId).serializeArray());
+    var result = post(baseurl + "cart", data);
+
+    result.done(function (objCart) {
+        listCart(hexDecode(objCart));
+    });
+}
+
+function updateMenu(ParentId,ExtrasId)
+{
+    var option = "";
+
+    //untuk update child item (hanya hapus, qty = 0)
+    var data = objectifyForm($('#form-update-menu-'+ParentId).serializeArray());
+    if (ExtrasId != null){
+        data["updateExtrasItem"] = ExtrasId;
+    }
+
+    var result = post(baseurl + "cart", data);
+
+    result.done(function (objCart) {
+        listCart(hexDecode(objCart))
+    });
+}
+
+function deleteMenu(storeId,cartItem) {
+    var result = post(baseurl + "deletecartitem", {
+        store_id : storeId,
+        cart_item_id : cartItem,
+        [csrfName] : csrfHash
+    });
+
+    result.done(function (objCart) {
+        listCart(hexDecode(objCart))
+    });
+}
+
+function postLocation(service_id) {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            postNearestStore(position.coords.latitude,position.coords.longitude,service_id);
+        });
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function postNearestStore(lat,lon,service_id) {
+    var result = post(baseurl + "service/outlet", {
+        service_id: service_id,
+        cust_addr_long: lon,
+        cust_addr_lat: lat,
+        [csrfName] : csrfHash
+    });
+
+    result.done(function (res) {
+        $("html").html(hexDecode(res));
+    });
+}
+
+function confirmReplacePayment() {
+    $('#payment_method_replace').val($('input[name="payment_method"]:checked').val());
+    $('#forceCancelBtn').unbind();
+    $('#forceCancelBtn').on('click',function () {
+        $('#cancelPaymentMessageModal').modal('hide');
+        $('#confirmCancelPaymentMessageModal').modal('show');
+    });
+    $('#confirmForceCancelBtn').unbind();
+    $('#confirmForceCancelBtn').on('click',function () {
+        $('#form_create_payment').submit();
+    });
+    $('#cancelPaymentMessageModal').modal('show');
+}
+
+function confirmCancelPayment(party = false) {
+    $('#forceCancelBtn').unbind();
+    $('#forceCancelBtn').on('click',function () {
+        $('#cancelPaymentMessageModal').modal('hide');
+        $('#confirmCancelPaymentMessageModal').modal('show');
+    });
+    $('#confirmForceCancelBtn').unbind();
+    $('#confirmForceCancelBtn').on('click',function () {
+        let result = post(baseurl+'order/payment/cancel', {
+            [csrfName]: csrfHash,
+            payment_id : $('#active_payment_id').val(),
+            order_id : $('#order_id').val()
+        });
+
+        result.done(function (cancelOrder) {
+            var resCancelOrder = JSON.parse(hexDecode(cancelOrder));
+            if(resCancelOrder.res === true){
+                if(party === true){
+                    window.location.href = baseurl + 'order/party';
+                } else {
+                    window.location.href = baseurl + 'order/review-order';
+                }
+            } else {
+                $('#cancelPaymentMessageModal').modal('hide');
+            }
+        });
+    });
+    $('#cancelPaymentMessageModal').modal('show');
+    
+}

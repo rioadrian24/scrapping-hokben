@@ -1,0 +1,14 @@
+2024/02/24-15:15:02.672 1504 Reusing MANIFEST C:\Users\RADRNM\Desktop\scrapping hokben\tmp\Default\IndexedDB\https_www.hokben.co.id_0.indexeddb.leveldb/MANIFEST-000001
+2024/02/24-15:15:02.673 1504 Recovering log #110
+2024/02/24-15:15:02.674 1504 Reusing old log C:\Users\RADRNM\Desktop\scrapping hokben\tmp\Default\IndexedDB\https_www.hokben.co.id_0.indexeddb.leveldb/000110.log 
+2024/02/24-15:15:02.674 1504 Delete type=2 #108
+2024/02/24-15:15:02.949 1254 Level-0 table #115: started
+2024/02/24-15:15:02.966 1254 Level-0 table #115: 2051 bytes OK
+2024/02/24-15:15:02.969 1254 Delete type=0 #110
+2024/02/24-15:15:02.970 1cb8 Manual compaction at level-0 from '\x00!\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00"\x00\x00\x00' @ 0 : 0; will stop at '\x00!\x00\x00\x05' @ 1380 : 1
+2024/02/24-15:15:02.971 1cb8 Compacting 1@0 + 1@1 files
+2024/02/24-15:15:02.999 1cb8 Generated table #116@0: 18 keys, 1333 bytes
+2024/02/24-15:15:03.000 1cb8 Compacted 1@0 + 1@1 files => 1333 bytes
+2024/02/24-15:15:03.002 1cb8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/02/24-15:15:03.003 1cb8 Delete type=2 #115
+2024/02/24-15:15:03.003 1cb8 Manual compaction at level-0 from '\x00!\x00\x00\x05' @ 1380 : 1 .. '\x00"\x00\x00\x00' @ 0 : 0; will stop at (end)
